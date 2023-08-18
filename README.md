@@ -1,0 +1,2 @@
+# hw_core
+verilog
