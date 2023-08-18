@@ -22,4 +22,22 @@ module handshake
   localparam  OutWaitReq       = 2'd0,
               OutSendValid     = 2'd0,
               OutWaitReady     = 2'd0,
-              OutSendRsp       = 2'd0,;
+              OutSendRsp       = 2'd0;
+
+module handshake
+  #(
+    parameter  DATA_WIDTH = 16
+  )
+  (
+    input  wire                          i_clk,
+    input  wire                          i_rstn,
+    input  wire                          i_valid,
+    output wire                          i_ready,
+
+    input  wire                          o_clk,
+    input  wire                          o_rstn,
+    output wire                          o_valid,
+    input  wire                          o_ready
+  );
+  
+  
